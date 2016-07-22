@@ -1,2 +1,3 @@
 
-baseurl: tech-blog
+
+exclude: ['.gitignore']
