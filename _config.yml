@@ -1,4 +1,11 @@
 
+
 baseurl: /Tech-Blog
 
+favicon: "/img/t.png"
+
+
+
 exclude: ['.gitignore']
+
+permalink: pretty

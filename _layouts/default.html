@@ -3,33 +3,31 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tech-Blog</title>
     <link rel="stylesheet" href="{{site.baseurl}}/css/main.css" media="screen" title="no title" charset="utf-8">
     <link href='{{site.baseurl}}/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- <script src="{{site.baseurl}}/Scripts/jquery-3.1.0.min.js"></script> -->
     <script src="{{site.baseurl}}/Scripts/bootstrap.min.js"></script>
-
-
-
+    {% if site.favicon %}
+      <link rel="icon" type="image/png" href="{{site.baseurl}}">
+    {% endif %}
 </head>
 
 <body>
+  <div class="container">
     <header>
-        <div class="container">
+
             {% include navbar.html %}
-        </div>
     </header>
 
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-body">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        {{content}}
 
-                {{content}}
-            </div>
-        </div>
+      </div>
     </div>
-
+  </div>
 </body>
 
 </html>

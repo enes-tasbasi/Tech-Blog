@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h2>Blogs</h2>
+        <div class="">
+                <ul>
+                    {% for blogs in site.posts %}
+                    <li>
+                        <a href="{{site.baseurl}}{{blogs.url}}">{{blogs.title}}</a>
+                        <p>{{blogs.meta}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+        </div>
 
-<h2>Blogs</h2>
-
-<ul>
-    {% for blogs in site.posts %}
-    <li>
-        <a href="">{{blogs.title}}</a>
-        <p>{{blogs.meta}}</p>
-    </li>
-    {% endfor %}
-</ul>
+    </div>
+</div>
