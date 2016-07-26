@@ -1,19 +1,19 @@
 ---
 layout: default
+title: Blog
 ---
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h2>Blogs</h2>
-        <div class="">
-                <ul>
-                    {% for blogs in site.posts %}
-                    <li>
-                        <a href="{{site.baseurl}}{{blogs.url}}">{{blogs.title}}</a>
-                        <p>{{blogs.meta}}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-        </div>
+<div class="page-header">
+  <h1>Blogs</h1>
+</div>
 
-    </div>
+<div class="">
+    <ul>
+        {% for blogs in site.posts %}
+        <li>
+            <h4><a href="{{site.baseurl}}{{blogs.url}}">{{blogs.title}}</a><small> .
+              <a href="{{site.baseurl}}/{{blogs.category}}/">{{blogs.category}}</a></small></h4>
+            <p></p>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
