@@ -3,4 +3,10 @@ layout: default
 title: Tech
 ---
 
-{% include category.html category='tech' %} 
+{% include category.html category='tech' %}
+
+<ul>
+    {% for post in site.categories.tech %}
+      <li><h4><a href="{{site.baseurl}}/{{post.url}}">{{ post.title }}</a></h4></li>
+    {% endfor %}
+</ul>
