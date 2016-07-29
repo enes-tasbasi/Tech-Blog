@@ -1,0 +1,28 @@
+
+<div class="page-header">
+  <h1>Category: {{include.category | capitalize_all }}<small></small></h1>
+</div>
+
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+      {% if category == 'tech' %}
+        {% for posts in category %}
+          {% for post in posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+    </ul>
+  </li>
+{% endfor %}
+
+<!-- <ul>
+  {% for category in site.categories %}
+      {% if category == '{{include.category}}' %}
+        {% for post in site.posts.category.{{include.category}} %}
+        <li><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+</ul> -->

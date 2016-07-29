@@ -10,9 +10,8 @@ title: Blog
     <ul>
         {% for blogs in site.posts %}
         <li>
-            <h4><a href="{{site.baseurl}}{{blogs.url}}">{{blogs.title}}</a><small> .
-              <a href="{{site.baseurl}}/{{blogs.category}}/">{{blogs.category}}</a></small></h4>
-            <p></p>
+            <h4><a href="{{site.baseurl}}{{blogs.url}}">{{blogs.title}}</a><small> -
+              <a href="{{site.baseurl}}/categories/{{blogs.category | downcase}}/">{{blogs.category}}</a> - {{ blogs.date | date: "%-d %B %Y" }}</small></h4>
         </li>
         {% endfor %}
     </ul>
